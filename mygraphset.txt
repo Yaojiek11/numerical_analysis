@@ -1,0 +1,10 @@
+set style data lines
+set logscale x 10
+set xrange[0:1000000000]
+set yrange[2.5:4.5]
+set xtics (1, 100, 10000, 1000000, 1000000000)
+set mytics
+set xlabel 'データ数'
+set ylabel '円周率'
+plot 'plot_data.txt' using 1:2 smooth acsplines with lines linetype -1 linewidth 2 notitle, 
+'plot_data.txt' using 1:2 with points
